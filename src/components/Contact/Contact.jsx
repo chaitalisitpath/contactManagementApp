@@ -50,8 +50,7 @@ function Contact() {
             </div>
           </div>
           <div className="flex justify-center mt-10">
-            <button type="submit" className="pr-4 rounded-xl pl-4 pt-2 pb-2 text-white bg-green-500">Submit
-            </button>
+            <button type="submit" className="pr-4 rounded-xl pl-4 pt-2 pb-2 text-white bg-green-500">Submit</button>
           </div>
         </form>
 
