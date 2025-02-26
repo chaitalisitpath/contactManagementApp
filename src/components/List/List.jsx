@@ -9,6 +9,7 @@ function List() {
       <>
         <p>Name: {formData.name}</p>
         <p>Email: {formData.email}</p>
+        <p>Message: {formData.msg}</p>
       </>
     ) : (
       <p>No data available.</p>
