@@ -1,8 +1,9 @@
 import React from 'react'
 import { useLocation } from 'react-router';
-function List() {
-  const location = useLocation();
-  const { formData } = location.state;
+function List({data}) {
+  // const data =[{formData}]
+  // const location = useLocation();
+  // const { formData } = location.state;
   return (
     //   <div>
     //   {formData ? (
@@ -17,7 +18,7 @@ function List() {
     // </div>
     <>
       <div className="mt-30">
-        <table className="table-striped w-1/2 mx-auto text-lg">
+        <table className="bg-gray-300 w-1/2 mx-auto text-lg">
           <thead className="font-bold">
             <tr>
               <td className="px-6 py-3">Name</td>
@@ -26,11 +27,18 @@ function List() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-            <td className="px-6 py-3">{formData.name}</td>
-            <td className="px-6 py-3">{formData.email}</td>
-            <td className="px-6 py-3">{formData.msg}</td>
-            </tr>
+            {data.map((item, index) => (
+
+              <tr key={index}>
+
+                <td>{item.name}</td>
+
+                <td>{item.email}</td>
+
+              </tr>
+
+            ))}
+
           </tbody>
         </table>
 

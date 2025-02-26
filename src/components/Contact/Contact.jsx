@@ -4,19 +4,22 @@ import { useNavigate } from 'react-router';
 
 function Contact() {
   
-    const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    msg: ''
+  const [formData, setFormData] = useState({
+    name:'',
+    email:'',
+    msg:''
   });
+  const [datalist, setDataList] = useState([]);
   const navigate = useNavigate();
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData([...formData, {[e.target.name]: e.target.value }]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/list', { state: { formData } });
+    setDataList([...datalist, formData]);
+    setFormData({name:'', email:'', msg:''});
+    navigate('/list');
   };
   return (
     <div className="flex justify-center mt-35 ">
