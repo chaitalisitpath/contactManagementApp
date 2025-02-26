@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <>
-      <div class="w-full h-80 bg-[#4e7b82] mt-20">
+      <div className="w-full h-80 bg-[#4e7b82] mt-20">
         <div className="flex justify-center items-center pt-30 text-white">
           <h2 className="text-3xl">Follow Us On</h2>
         </div>

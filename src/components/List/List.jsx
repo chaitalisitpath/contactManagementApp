@@ -2,15 +2,18 @@ import React from 'react'
 import { useLocation} from 'react-router';
 function List() {
     const location = useLocation();
-    
-    const formData = location.state;
+    const {formData} = location.state;
   return (
-    <>
-    <div>List</div>
-    <p>{formData.name}</p>
-    <p>{formData.email}</p>
-    <p>{formData.msg}</p>
-    </>
+    <div>
+    {formData ? (
+      <>
+        <p>Name: {formData.name}</p>
+        <p>Email: {formData.email}</p>
+      </>
+    ) : (
+      <p>No data available.</p>
+    )}
+  </div>
   )
 }
 
