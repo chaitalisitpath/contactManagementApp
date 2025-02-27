@@ -14,6 +14,7 @@ import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import List from "./components/List/List.jsx";
+import Edit from "./components/Edit/Edit.jsx";
 
 let dataList = [];
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact dataList={dataList} />} />
       <Route path="/list" element={<List data={dataList} />} />
+      <Route path="/edit/:index" element={<Edit data={dataList}/>}/>
     </Route>
   )
 );

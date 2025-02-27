@@ -13,7 +13,7 @@ function Header() {
           </Link>
         </div>
         <div>
-          <ul className="text-lg font-bold flex md:flex-row md:space-x-8">
+          <ul className="pt-1 text-xl font-bold flex md:flex-row gap-8">
 
             <li>
               <NavLink to=""
@@ -39,7 +39,9 @@ function Header() {
           </ul>
         </div>
         <div className="mt-2">
-          <Link to="" type="button" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">Register</Link>
+          <Link to="" type="button" onClick={()=>{
+            alert("Fill contact us form to perform crud operation")
+          }} className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">Register</Link>
         </div>
       </div>
     </nav>
