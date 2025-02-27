@@ -8,6 +8,7 @@ function List({data}) {
     setDataToShow(prevData => {
       let newData = [...prevData];
       newData.splice(index, 1); 
+      data.splice(index, 1);
       return newData;
     })
   }
@@ -23,7 +24,7 @@ function List({data}) {
   return (
      <>
       <div className="mt-30">
-        <table className="bg-gray-300 w-1/2 mx-auto text-lg">
+        <table className="bg-gray-300 rounded-xl w-290 mx-auto text-lg">
         
           <thead className="font-bold">
             <tr>
@@ -35,9 +36,9 @@ function List({data}) {
           <tbody>
             {dataToShow.map((item, index) => (
               <tr key={index}>
-                <td>{item.name}</td>
-                <td>{item.email}</td>
-                <td>{item.msg}</td>
+                <td className="px-6 py-3">{item.name}</td>
+                <td className="px-6 py-3">{item.email}</td>
+                <td className="px-6 py-3">{item.msg}</td>
                 <td><button onClick={() => {
                   const isConfirmed = confirm('Are you sure you want to delete?');
                   if(isConfirmed)
@@ -45,6 +46,7 @@ function List({data}) {
                     deleteCurrentItem(index)
                   }
                 }} className='bg-red-700 text-white'>Delete</button></td>
+               
               </tr>
             ))}
 

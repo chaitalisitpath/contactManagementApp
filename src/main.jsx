@@ -23,7 +23,6 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact dataList={dataList} />} />
-      {/* <Route path='/list' element={<List/>}/> */}
       <Route path="/list" element={<List data={dataList} />} />
     </Route>
   )
